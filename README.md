@@ -35,5 +35,25 @@
 5. `git remote add origin git@SSH地址`: 在本地添加远程仓库地址; origin为远程仓库的默认名字，可以换;
 6. `git push -u origin master `: 推送本地当前分支到远程origin的master；只第一次需要，后续写`git push`；如果提示`git push`就运行一下
 7. `git push origin x:x`x———>x的上传方式；`git checkout x  git push -u origin x`:第二种
-8. `git clone git@hhtps的地址`: 下载他人的库;`cd 目录`;`git add \commit \pull \push`
-9. [难记的命令]:(https://stackoverflow.com/questions/1778088/how-do-i-clone-a-single-branch-in-git/7034921#7034921)
+8. ```
+   git clone git@xxx.git: 在当前目录下创建对应xxx目录，下载他人的库;
+   git clone git@xxx.git yyy : 以yyy为名的下载库
+   git clone git@xxx.git . :使用当前目录容纳下载的代码嗯和.git(最好当前目录为空)
+   cd 目录;再对应执行操作git add \commit \pull \push
+   git
+9. [难记的命令](https://stackoverflow.com/questions/1778088/how-do-i-clone-a-single-branch-in-git/7034921#7034921)
+10. [git clone 慢速下载](https://jscode.me/t/topic/789)
+-----------
+## 使用bash alias 简化命令
+```javascrpit
+touch ~/.bashrc
+echo 'alias ga="git add"'>> ~/.bashrc
+echo 'alias gc="git commit -v"'>> ~/.bashrc
+echo 'alias gl="git pull"'>> ~/.bashrc
+echo 'alias gp="git push"'>> ~/.bashrc
+echo 'alias gco="git checkout"'>> ~/.bashrc
+echo 'alias gst="git status -sb"'>> ~/.bashrc
+source ~/.bashrc
+```
+在 ~/.bashrc 的最后一行添加` alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(boldblue)<%an>%Creset' --abbrev-commit-- | less" `
+`git rebase -i xxx`: 美化历史命令
