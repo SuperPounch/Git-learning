@@ -57,6 +57,7 @@ source ~/.bashrc
 ```
 在 ~/.bashrc 的最后一行添加` alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(boldblue)<%an>%Creset' --abbrev-commit-- | less" `
 `git rebase -i xxx`: 美化历史命令，xxx是要修改版本号的前一个版本号
+
 -------
 ## Git&Hugo的个人博客
 1. 点击[Hugo下载链接](https://github.com/gohugoio/hugo/releases)下载，解压后在PATH中添加hugo.exe文件路径;在Terminal中运行hugo version查看版本
