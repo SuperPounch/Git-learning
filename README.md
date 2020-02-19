@@ -57,3 +57,14 @@ source ~/.bashrc
 ```
 在 ~/.bashrc 的最后一行添加` alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(boldblue)<%an>%Creset' --abbrev-commit-- | less" `
 `git rebase -i xxx`: 美化历史命令，xxx是要修改版本号的前一个版本号
+-------
+## Git&Hugo的个人博客
+1. 点击[Hugo下载链接](https://github.com/gohugoio/hugo/releases)下载，解压后在PATH中添加hugo.exe文件路径;在Terminal中运行hugo version查看版本
+
+2. 点击[Hugo官网](https://gohugo.io/)按步骤操作
+ 
+   > 注释:第七步hugo操作会创建public目录，即博客站点，运行完会看见博客网址，此时另开一个Terminal操作
+ 3. 新建Github Repo,命名:github账户名.github.io
+ 4. public本地库`cd public - git init - ga . - gc -v `，并且新建。gitignore目录，添加/public/
+ 5. 关联Github仓库，上传public目录`git remote add origin git@xxx.git` ` git push -u origin master`
+ 6. 打开Github仓库Setting下Github Pages，里面就有博客网站了。
