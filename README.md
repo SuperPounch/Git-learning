@@ -24,7 +24,7 @@
 7. `git reset --hard 代码版本号` :跳回到所属版本的代码进度，ps:版本号是前六位,使用前请把所有代码commit完，否则会消失;
 8. `git branch 分支名称`: 创建分支
 9. `git checkout 分支名`: 进入该分支; `git checkout`: 查看所有分支;
-10. 在哪个分支，commit提交就会提交给当前的分支;若分支之间产生冲突，可以通灵术git stash,也可以合并冲突;
+10. 在哪个分支，commit提交就会提交给当前的分支;若分支之间产生冲突，可以通灵术git stash(隐藏文件，git stash pop 可以重现),也可以合并冲突;
 11. `git merge`: 将该分支合并到当前分支;若产生冲突时，根据conflict提示修改;使用git staus -sb 查看哪个文件冲突; 删除带>>>或者====以及要删除的;再git add，重复修改冲突直至可以commit;合并完git branch -d x
 -------
 ## Git远程仓库
@@ -56,4 +56,4 @@ echo 'alias gst="git status -sb"'>> ~/.bashrc
 source ~/.bashrc
 ```
 在 ~/.bashrc 的最后一行添加` alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(boldblue)<%an>%Creset' --abbrev-commit-- | less" `
-`git rebase -i xxx`: 美化历史命令
+`git rebase -i xxx`: 美化历史命令，xxx是要修改版本号的前一个版本号
